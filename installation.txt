@@ -15,3 +15,17 @@ https://github.com/BVLC/caffe/issues/6063
 
 Important: brew paths (opencv package, in particular) could be moved one directory up
 Brew installs everything in /home/xilini/.linuxbrew, just to know.
+
+.bash_profile (end):
+# User specific environment and startup programs
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export PATH="/home/xilini/.linuxbrew/sbin:$PATH"
+
+.bashrc (end):
+export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}$
+export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PYTHONPATH=${HOME}/python:$PYTHONPATH
+export LD_LIBRARY_PATH=/home/xilini/nccl/build/lib/:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/xilini/object_relation_transformer/bottom-up-attention/caffe/distribute/lib/:$LD_LIBRARY_PATH
+export CC=gcc
+export CXX=g++
