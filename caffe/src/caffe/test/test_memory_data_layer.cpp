@@ -1,5 +1,5 @@
 #ifdef USE_OPENCV
-#include <opencv2/core/core.hpp>
+#include <opencv2/core.hpp>
 #endif  // USE_OPENCV
 
 #include <string>
