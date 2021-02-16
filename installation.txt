@@ -1,2 +1,17 @@
-hej
-1
+These are the steps I took to install caffe from Anderson's FasterRCNN for my feature extraction.
+
+1. Use brew (linux version) to install all dependencies, the tutorial I followed: http://zyxue.github.io/2015/05/12/install-caffe-on-linux-host-without-root-permission.html
+2. Important note about OpenCV files: https://github.com/BVLC/caffe/issues/6680
+   OpenCV: different syntax for version2 and version3
+3. To check paths: https://github.com/BVLC/caffe/issues/3597 
+4. to let it find the necessary python config file, set up the environmental variable: https://github.com/BVLC/caffe/issues/410
+5. do not forget to 'brew install boost-python3' (boost-python is not compiled for ubuntu, only for mac) and set the symlink if the lib file is not found:
+https://github.com/BVLC/caffe/issues/6063
+6. A good piece of information: https://gist.github.com/kylemcdonald/0698c7749e483cd43a0e
+7. Make sure your numpy is correctly specified: https://github.com/BVLC/caffe/issues/5432
+8. when can't import _caffe module: https://github.com/BVLC/caffe/issues/263
+9. and important note about importing caffe in ipython vs python scripts: https://github.com/BVLC/caffe/issues/3597
+10. Makefile is prepared now! Check the paths in it.
+
+Important: brew paths (opencv package, in particular) could be moved one directory up
+Brew installs everything in /home/xilini/.linuxbrew, just to know.
